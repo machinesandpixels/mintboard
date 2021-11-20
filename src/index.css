@@ -10,3 +10,15 @@ body {
 h1 {
   background-color: aqua;
 }
+
+h1 {
+  margin: 10% 33%;
+}
+
+.drawing-area {
+  width: 600px;
+  height: 600px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(47, 213, 255);
+  margin: -8% 23%;
+}
