@@ -59,9 +59,11 @@ const DrawingContainer = ({onClearLines, clearLines}) => {
                         key={i}
                         points={line.points}
                         stroke="#0000ff"
-                        strokeWidth={4}
-                        tension={0.5}
-                        lineCap="round"
+                        strokeWidth={6}
+                        tension={1}
+                        lineCap="butt"
+                        shadowBlur={12}
+                        lineJoin="bevel"
                         globalCompositeOperation={
                             line.tool === 'eraser' ? 'destination-out' : 'source-over'
                         }
