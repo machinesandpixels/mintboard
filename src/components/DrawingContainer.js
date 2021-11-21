@@ -69,6 +69,7 @@ const DrawingContainer = ({onClearLines, clearLines}) => {
                         }
                         />
                     ))}
+                    {console.log(lines)}
                 </Layer>
             </Stage>
         </div>
