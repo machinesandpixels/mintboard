@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import Header from './Header';
 import HomePage from '../pages/HomePage';
-import MainPage from '../pages/MainPage';
+import WhiteBoard from '../pages/WhiteBoard';
 // import DrawingContainer from './components/DrawingContainer';
 
 const App = () => {
@@ -26,7 +26,7 @@ const App = () => {
             path='/'
             element={ <HomePage /> }
           />
-          <Route path="/images"  element={ <MainPage /> } />
+          <Route path="/images"  element={ <WhiteBoard /> } />
           </Routes>
       </Router>
   </div>
