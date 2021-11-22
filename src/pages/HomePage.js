@@ -9,7 +9,7 @@ import Row from 'react-bootstrap/Row';
 const HomePage = () => {
     return (
         <div>
-        <Container style={{ width: '40rem' }}>
+            <Container style={{ width: '40rem' }}>
         <Row>
             <Col>
             1 of 2
@@ -49,8 +49,7 @@ const HomePage = () => {
     <Col>2 of 3</Col>
     <Col>3 of 3</Col>
   </Row>
-</Container>
-            
+            </Container>  
         </div>
     )
 }
