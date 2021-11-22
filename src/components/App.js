@@ -26,7 +26,7 @@ const App = () => {
             path='/'
             element={ <HomePage /> }
           />
-          <Route path="/images"  element={ <WhiteBoard /> } />
+          <Route path="/whiteboard"  element={ <WhiteBoard /> } />
           </Routes>
       </Router>
   </div>
