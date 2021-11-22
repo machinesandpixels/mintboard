@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Row from 'react-bootstrap/Row';
+import Logo from '../components/Logo';
 
 const HomePage = () => {
     return (
@@ -47,7 +48,9 @@ const HomePage = () => {
   <Row>
     <Col>1 of 3</Col>
     <Col>2 of 3</Col>
-    <Col>3 of 3</Col>
+    <Col>3 of 3
+        <Logo />
+    </Col>
   </Row>
             </Container>  
         </div>
