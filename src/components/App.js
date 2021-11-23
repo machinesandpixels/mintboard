@@ -10,19 +10,24 @@ import WhiteBoard from '../pages/WhiteBoard';
 
 const App = () => {
   return (
-    <div>
+    // <div>
      <Router>
           <Header />
           <Routes>
           <Route
             exact
             path='/'
+            // component={ HomePage }
             element={ <HomePage /> }
           />
-          <Route path="/whiteboard"  element={ <WhiteBoard /> } />
+          <Route 
+            path="/whiteboard"
+            // component={ WhiteBoard }  
+            element={ <WhiteBoard /> } 
+            />
           </Routes>
       </Router>
-  </div>
+  // </div>
   );
 }
 
