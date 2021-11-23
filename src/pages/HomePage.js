@@ -15,15 +15,18 @@ const HomePage = () => {
             <Row>
               <Col>
               <h1 className="text-success">
-                Jot down your thoughts with Mintboard 
+                Jot down your thoughts with 
+                <span className="text-dark"> Mint</span>
+                board 
               </h1>
               </Col>
             </Row>
 
             <Row>
               <Col>
-              <Card id="card-border">
-              <Card.Img variant="top" src="https://imgr.search.brave.com/5sH5KI0ukbsFd2hNklHSMjsBsbnhRX5YcPeNgsnM3k8/fit/736/225/ce/1/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC4z/emhHZGhRSTY5REVo/a0picThydTFBSGFF/eCZwaWQ9QXBp" />
+                <div className="d-flex justify-content-center"> 
+                <Card id="card-border" style={{ width: '35rem' }}>
+              <Card.Img variant="top" src="/images/whiteboard.jpeg" />
             <Card.Body>
               <Card.Title 
                 className="d-flex justify-content-center">
@@ -39,7 +42,8 @@ const HomePage = () => {
               </Button>
               </div>
             </Card.Body>
-          </Card>
+                </Card>
+                </div>
               </Col>
             </Row>
 
