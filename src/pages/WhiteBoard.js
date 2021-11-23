@@ -10,7 +10,7 @@ const WhiteBoard = () => {
         </div>
       <div className="whiteboard">
       {/* <div className="drawing-area"> */}
-        <DrawingContainer style={{ width: '5rem' }} />
+        {/* <DrawingContainer style={{ width: '5rem' }} /> */}
       {/* </div> */}
       </div>
     </div>
