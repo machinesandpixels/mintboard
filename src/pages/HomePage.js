@@ -14,10 +14,10 @@ const HomePage = () => {
             <Container style={{ width: '40rem' }}>
             <Row>
               <Col>
-              <h1 className="text-success">
-                Jot down your thoughts with 
-                <span className="text-dark"> Mint</span>
-                board 
+              <h1 className="text-dark">
+                Jot down your thoughts with <span className="gradient--text"> 
+                     Mintboard
+                 </span> 
               </h1>
               </Col>
             </Row>
@@ -37,7 +37,7 @@ const HomePage = () => {
                 the card's content.
               </Card.Text> */}
               <div className="text-center"> 
-              <Button as={Link} to='/whiteboard'  variant="success">
+              <Button as={Link} to='/whiteboard'  className="text-dark gradient--bg">
                 Click Me
               </Button>
               </div>
@@ -58,7 +58,8 @@ const HomePage = () => {
                 Some quick example text to build on the card title and make up the          bulk of
                 the card's content.
               </Card.Text>
-              <Button variant="primary">
+              <Button className="logo--text">
+              {/* <Button variant="primary"> */}
                 Go somewhere
               </Button>
             </Card.Body>

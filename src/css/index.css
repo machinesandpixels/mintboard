@@ -17,7 +17,8 @@ h1 {
 
 #card-border{
   border-radius: 1px;
-  filter: drop-shadow(0 0 0.19rem rgb(8, 165, 42));
+  /* filter: drop-shadow(0 0 0.19rem rgb(8, 165, 42)); */
+  filter: drop-shadow(0 0 0.19rem rgba(0,212,169,1));
 }
 
 .logo--container {
@@ -28,10 +29,22 @@ h1 {
   width: 180px;
   margin: 2rem;
 }
+
+.gradient--bg{
+  background: rgb(0,212,169);
+  background: linear-gradient(90deg, rgba(0,212,169,1) 0%, rgba(3,177,254,1) 100%);
+}
+
+.gradient--text{
+  background: -webkit-linear-gradient(rgba(0,212,169,1), rgba(3,177,254,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .drawing-area {
   width: 400px;
   height: 400px;
-  border: 2px solid rgb(47, 213, 255);
+  border: 2px solid #00D4A9;
   margin: -8% 23%;
   /* display: flex;
   justify-content: center; */

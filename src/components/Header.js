@@ -8,7 +8,8 @@ import Container from 'react-bootstrap/Container';
 
 const Header = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="success" variant="dark">
+        <Navbar collapseOnSelect expand="lg" className="gradient--bg" variant="dark">
+        {/* <Navbar collapseOnSelect expand="lg" bg="success" variant="dark"> */}
           <Container>
                 <Navbar.Brand as={Link} to='/'>
                     Mintboard
