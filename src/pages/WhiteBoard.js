@@ -1,12 +1,17 @@
 import React from 'react';
+import Logo from '../components/Logo';
 import DrawingContainer from '../components/DrawingContainer';
 
 const WhiteBoard = () => {
     return (
     <div className="">
-       <h1>Mintboard</h1>
-      <div className="drawing-area">
-        <DrawingContainer />
+        <div className="logo--container">
+            <Logo />
+        </div>
+      <div className="whiteboard">
+      {/* <div className="drawing-area"> */}
+        <DrawingContainer style={{ width: '5rem' }} />
+      {/* </div> */}
       </div>
     </div>
     )

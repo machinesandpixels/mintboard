@@ -11,14 +11,37 @@ h1 {
   background-color: aqua;
 }
 
-h1 {
+/* h1 {
   margin: 10% 33%;
-}
+} */
 
+.logo--container {
+  display: flex;
+  justify-content: center;
+}
+.logo{
+  width: 180px;
+  margin: 2rem;
+}
 .drawing-area {
-  width: 600px;
-  height: 600px;
-  background-color: rgb(255, 255, 255);
+  width: 400px;
+  height: 400px;
   border: 2px solid rgb(47, 213, 255);
   margin: -8% 23%;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.whiteboard{
+  width: 600px;
+  height: 600px;
+  /* background-image: url("https://imgr.search.brave.com/UWRTUGNWC5JN8MGl3fxB_ki34lF-kKUhlvsHM6ekySs/fit/613/225/ce/1/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC53/bzlIcGktaDZNZk44/NHoxSGx3dm13SGFG/dSZwaWQ9QXBp"); */
+  background-image: url("https://cdn.pixabay.com/photo/2014/04/02/10/13/whiteboard-303145_1280.png");
+  /* background-image: url("https://imgr.search.brave.com/1HEGTifWKPzp8Gh2LkL8RPhFiIuIpVJNvwAW76uP2gU/fit/777/225/ce/1/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC55/Y1d4bzc4NEttdkNC/TzVUdnp5T3dRSGFF/aCZwaWQ9QXBp"); */
+
+  /* background-position: center;  */
+  background-repeat: no-repeat; 
+  background-size: 600px 600px;
+  /* margin: -8% 23%; */
+  margin: 0 auto;
 }
