@@ -13,10 +13,11 @@ let historyStep = 0;
 const mapSize = 500;
 
 const DrawingContainer = () => {
-    const [lines, setLines] = useState([])
+  const [lines, setLines] = useState([])
   const [drawing, setDrawing] = useState(false)
   const [color, setColor] = useState("red")
-  const [mapMode, setMapMode] = useState(MapMode.Map)
+  // const [mapMode, setMapMode] = useState(MapMode.Map)
+  const [mapMode, setMapMode] = useState(MapMode.Drawing)
   const stageRef = useRef(null);
 
   const handleUndo = () => {
@@ -72,36 +73,51 @@ const DrawingContainer = () => {
     setColor(value.hex)
   }
   return (
+    <div>
+        {/* <div id="color-picker">
+        <HuePicker
+          onChange={handleColorChange} />
+           <CirclePicker
+           className="picker"
+          style={{ width: '10rem' }}
+          width="30px"
+          circleSpacing={3}
+          colors={ColorList}
+          onChange={handleColorChange} />
+          
+      </div> */}
+       
+   
     <div className="container_" >
       <div className="toolbar_">
-        <IconButton onClick={
+        {/* <IconButton onClick={
           () => {
             setMapMode(mapMode === MapMode.Drawing ? MapMode.Map : MapMode.Drawing)
           }}>
           <IconToggle >
-          <div icon='...createe'> ?: </div>
-            {/* <MaterialIcon style={{ color: "#dce775" }} icon='createe' /> */}
+          <div icon='DRAW'> ?: </div>
+            <MaterialIcon style={{ color: "#dce775" }} icon='createe' />
           </IconToggle>
           <IconToggle isOn >
-            <MaterialIcon style={{ color: "#37D67A" }} icon='roomm' />
+            <MaterialIcon style={{ color: "#37D67A" }} icon='Undraw' />
           </IconToggle>
-        </IconButton>
+        </IconButton> */}
         <IconButton onClick={handleUndo}>
           <MaterialIcon style={{ color: "white" }} icon='undo' />
         </IconButton>
         <IconButton onClick={handleRedo}>
           <MaterialIcon style={{ color: "white" }} icon='redo' />
         </IconButton>
-      <div id="color-picker">
+      {/* <div id="color-picker">
         <HuePicker
           onChange={handleColorChange} />
+      </div> */}
         <CirclePicker
           style={{ width: '10rem' }}
           width="30px"
           circleSpacing={3}
           colors={ColorList}
           onChange={handleColorChange} />
-        </div>
       </div>
       <div className={`${mapMode === MapMode.Drawing ? "drawing" : ""}`}>
         <Stage
@@ -120,6 +136,7 @@ const DrawingContainer = () => {
           }
         </Stage>
       </div>
+    </div>
     </div>
   );
 }
