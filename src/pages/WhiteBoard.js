@@ -8,7 +8,7 @@ const WhiteBoard = () => {
         <div className="logo--container">
             <Logo />
         </div>
-      <div className="whiteboard">
+      <div className="whiteboardd">
       {/* <div className="drawing-area"> */}
         {/* <DrawingContainer style={{ width: '5rem' }} /> */}
       {/* </div> */}

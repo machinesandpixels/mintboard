@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { Stage } from "react-konva";
 import Drawing  from "./Drawing";
 import BackgroundLayer from "./BackgroundLayer";
-import { CirclePicker } from 'react-color';
+import { CirclePicker, HuePicker } from 'react-color';
 import { MapMode, ColorList } from "./constants";
 import IconButton, { IconToggle } from '@material/react-icon-button';
 import MaterialIcon from '@material/react-material-icon'
@@ -12,7 +12,7 @@ let history = [[]];
 let historyStep = 0;
 const mapSize = 500;
 
-const DContainer = () => {
+const DrawingContainer = () => {
     const [lines, setLines] = useState([])
   const [drawing, setDrawing] = useState(false)
   const [color, setColor] = useState("red")
@@ -72,17 +72,18 @@ const DContainer = () => {
     setColor(value.hex)
   }
   return (
-    <div className="container" >
-      <div className="toolbar">
+    <div className="container_" >
+      <div className="toolbar_">
         <IconButton onClick={
           () => {
             setMapMode(mapMode === MapMode.Drawing ? MapMode.Map : MapMode.Drawing)
           }}>
           <IconToggle >
-            <MaterialIcon style={{ color: "#dce775" }} icon='createe' />
+          <div icon='...createe'> ?: </div>
+            {/* <MaterialIcon style={{ color: "#dce775" }} icon='createe' /> */}
           </IconToggle>
           <IconToggle isOn >
-            <MaterialIcon style={{ color: "#37D67A" }} icon='room' />
+            <MaterialIcon style={{ color: "#37D67A" }} icon='roomm' />
           </IconToggle>
         </IconButton>
         <IconButton onClick={handleUndo}>
@@ -91,12 +92,16 @@ const DContainer = () => {
         <IconButton onClick={handleRedo}>
           <MaterialIcon style={{ color: "white" }} icon='redo' />
         </IconButton>
-
+      <div id="color-picker">
+        <HuePicker
+          onChange={handleColorChange} />
         <CirclePicker
+          style={{ width: '10rem' }}
           width="30px"
           circleSpacing={3}
           colors={ColorList}
           onChange={handleColorChange} />
+        </div>
       </div>
       <div className={`${mapMode === MapMode.Drawing ? "drawing" : ""}`}>
         <Stage
@@ -119,4 +124,4 @@ const DContainer = () => {
   );
 }
 
-export default DContainer;
+export default DrawingContainer;

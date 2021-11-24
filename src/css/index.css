@@ -63,3 +63,34 @@ h1 {
   /* margin: -8% 23%; */
   margin: 0 auto;
 }
+
+  .container_ {
+     display: flex; 
+     justify-content: center;
+     flex-direction: column;
+     align-items: center; 
+     margin-top: 20px;
+     background-color: blue;
+   }
+   
+
+    .toolbar_ {
+      background: rgb(21, 22, 26);
+      margin-right: 3px;
+      display: flex;
+      justify-content: center;
+      /* flex-direction: column; */
+      /* justify-content: flex-start; */
+      /* align-items: center  */
+      height: 50px;
+      width: 100%;
+    }
+
+    #color-picker{
+      display: flex;
+      border: 5px solid rebeccapurple;
+      width: 1500px;
+      /* position: relative;
+      top: 90px; */
+    }
+    
