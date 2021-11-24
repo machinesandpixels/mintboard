@@ -102,18 +102,18 @@ const DrawingContainer = () => {
             <MaterialIcon style={{ color: "#37D67A" }} icon='Undraw' />
           </IconToggle>
         </IconButton> */}
-        <IconButton onClick={handleUndo}>
-          <MaterialIcon style={{ color: "white" }} icon='undo' />
+        <IconButton className="mx-5" onClick={handleUndo}>
+          <MaterialIcon style={{ color: "white" }} icon='Undo' />
         </IconButton>
-        <IconButton onClick={handleRedo}>
-          <MaterialIcon style={{ color: "white" }} icon='redo' />
+        <IconButton className="mb-3" onClick={handleRedo}>
+          <MaterialIcon style={{ color: "white" }} icon='Redo' />
         </IconButton>
       {/* <div id="color-picker">
         <HuePicker
           onChange={handleColorChange} />
       </div> */}
         <CirclePicker
-          style={{ width: '10rem' }}
+          // style={{ width: '10rem' }}
           width="30px"
           circleSpacing={3}
           colors={ColorList}
