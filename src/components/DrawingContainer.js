@@ -1,79 +1,122 @@
-import { React } from 'react';
-import { Stage, Layer, Line } from 'react-konva';
-import { useEffect, useState, useRef } from 'react';
+import React, { useState, useRef } from "react";
+import { Stage } from "react-konva";
+import Drawing  from "./Drawing";
+import BackgroundLayer from "./BackgroundLayer";
+import { CirclePicker } from 'react-color';
+import { MapMode, ColorList } from "./constants";
+import IconButton, { IconToggle } from '@material/react-icon-button';
+import MaterialIcon from '@material/react-material-icon'
+import '@material/react-icon-button/dist/icon-button.css';
 
-const DrawingContainer = ({onClearLines, clearLines}) => {
+let history = [[]];
+let historyStep = 0;
+const mapSize = 500;
 
-    const [lines, setLines] = useState([]);
-    const isDrawing = useRef(false);
+const DContainer = () => {
+    const [lines, setLines] = useState([])
+  const [drawing, setDrawing] = useState(false)
+  const [color, setColor] = useState("red")
+  const [mapMode, setMapMode] = useState(MapMode.Map)
+  const stageRef = useRef(null);
 
-    useEffect(() => {
-        //loadImage();
-    }, [clearLines])
-    
-    const handleMouseDown = (e) => {
-        isDrawing.current = true;
-        const pos = e.target.getStage().getPointerPosition();
-        setLines([...lines, { points: [pos.x, pos.y] }]);
-    };
-    
-    const handleMouseMove = (e) => {
-        // no drawing - skipping
-        if (!isDrawing.current) {
-          return;
-        }
-        const stage = e.target.getStage();
-        const point = stage.getPointerPosition();
-    
-        // To draw line
-        let lastLine = lines[lines.length - 1];
-        
-        if(lastLine) {
-            // add point
-            lastLine.points = lastLine.points.concat([point.x, point.y]);
-                
-            // replace last
-            lines.splice(lines.length - 1, 1, lastLine);
-            setLines(lines.concat());
-        }
-        
-    };
-    
-    const handleMouseUp = () => {
-        isDrawing.current = false;
-    };
+  const handleUndo = () => {
+    if (historyStep === 0) {
+      return;
+    }
+    historyStep -= 1;
+    const previous = history[historyStep];
+    setLines(previous);
+  };
 
-    return (
-        <div className="text-center text-dark">
-            <Stage
-                width={600}
-                height={600}
-                onMouseDown={handleMouseDown}
-                onMousemove={handleMouseMove}
-                onMouseup={handleMouseUp}
-                className="canvas-stage"
-            >
-                <Layer>
-                    {lines.map((line, i) => (
-                        <Line
-                        key={i}
-                        points={line.points}
-                        stroke="#0000ff"
-                        strokeWidth={6}
-                        tension={1}
-                        lineCap="butt"
-                        shadowBlur={12}
-                        lineJoin="bevel"
-                        globalCompositeOperation={
-                            line.tool === 'eraser' ? 'destination-out' : 'source-over'
-                        }
-                        />
-                    ))}
-                    {console.log(lines)}
-                </Layer>
-            </Stage>
-        </div>
-    )
+  const handleRedo = () => {
+    if (historyStep === history.length - 1) {
+      return;
+    }
+    historyStep += 1;
+    const next = history[historyStep];
+    setLines(next);
+  };
+
+  const handleMouseDown = () => {
+    setDrawing(true);
+    // add line
+    setLines([...lines, []]);
+  };
+
+  const handleMouseMove = e => {
+    // no drawing - skipping
+    if (!drawing) {
+      return;
+    }
+    const stage = stageRef.current.getStage();
+    const point = stage.getPointerPosition();
+
+    let lastLine = lines[lines.length - 1];
+    // add point
+    let newLines = lastLine.concat([point.x, point.y]);
+    newLines.storke = color;
+    // replace last
+    lines.splice(lines.length - 1, 1, newLines);
+    setLines(lines.concat());
+  };
+
+  const handleMouseUp = () => {
+    //add to history
+    history.push(lines);
+    historyStep += 1;
+
+    setDrawing(false);
+  };
+
+  const handleColorChange = (value, event) => {
+    setColor(value.hex)
+  }
+  return (
+    <div className="container" >
+      <div className="toolbar">
+        <IconButton onClick={
+          () => {
+            setMapMode(mapMode === MapMode.Drawing ? MapMode.Map : MapMode.Drawing)
+          }}>
+          <IconToggle >
+            <MaterialIcon style={{ color: "#dce775" }} icon='createe' />
+          </IconToggle>
+          <IconToggle isOn >
+            <MaterialIcon style={{ color: "#37D67A" }} icon='room' />
+          </IconToggle>
+        </IconButton>
+        <IconButton onClick={handleUndo}>
+          <MaterialIcon style={{ color: "white" }} icon='undo' />
+        </IconButton>
+        <IconButton onClick={handleRedo}>
+          <MaterialIcon style={{ color: "white" }} icon='redo' />
+        </IconButton>
+
+        <CirclePicker
+          width="30px"
+          circleSpacing={3}
+          colors={ColorList}
+          onChange={handleColorChange} />
+      </div>
+      <div className={`${mapMode === MapMode.Drawing ? "drawing" : ""}`}>
+        <Stage
+          width={mapSize}
+          height={mapSize}
+          onContentMousedown={handleMouseDown}
+          onContentMousemove={handleMouseMove}
+          onContentMouseup={handleMouseUp}
+          ref={stageRef}
+        >
+           <BackgroundLayer mapSize={mapSize} />
+          {
+            mapMode === MapMode.Drawing && (
+              <Drawing mapSize={mapSize} lines={lines} storke={color} />
+            )
+          }
+        </Stage>
+      </div>
+    </div>
+  );
 }
 
-export default DrawingContainer;
+export default DContainer;

@@ -12,6 +12,7 @@ const WhiteBoard = () => {
       {/* <div className="drawing-area"> */}
         {/* <DrawingContainer style={{ width: '5rem' }} /> */}
       {/* </div> */}
+      <DrawingContainer />
       </div>
     </div>
     )

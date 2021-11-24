@@ -1,7 +1,7 @@
 import React from "react";
 import { Layer, Image } from "react-konva";
 
-const getMapAsset = () => require(`../assets/whiteboard.jpeg`);
+const getMapAsset = () => require(`../assets/whiteboard.png`);
 
 class BackgroundLayer extends React.Component {
   state = { image: null };
