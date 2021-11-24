@@ -11,21 +11,29 @@ import Logo from '../components/Logo';
 const HomePage = () => {
     return (
         <div>
-            <Container style={{ width: '40rem' }}>
+            <Container>
+            {/* <Container style={{ width: '40rem' }}> */}
             <Row>
               <Col>
               <h1 className="text-dark">
-                Jot down your thoughts with <span className="gradient--text"> 
+                 <span className="gradient--text"> 
                      Mintboard
                  </span> 
               </h1>
+              {/* <h1 className="text-dark">
+                Jot down your thoughts with <span className="gradient--text"> 
+                     Mintboard
+                 </span> 
+              </h1> */}
               </Col>
             </Row>
 
             <Row>
               <Col>
                 <div className="d-flex justify-content-center"> 
-                <Card id="card-border" style={{ width: '35rem' }}>
+                <Card id="card-border" style={{ width: '25rem' }}>
+                {/* <div className="d-flex justify-content-center"> 
+                <Card id="card-border" style={{ width: '35rem' }}> */}
               <Card.Img variant="top" src="/images/whiteboard.jpeg" />
             <Card.Body>
               <Card.Title 
