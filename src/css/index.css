@@ -117,4 +117,9 @@ h1 {
       /* flex: 1; */
      flex: 3;
     }
+
+    .tt{
+      width: 900px;
+      padding: 4rem;
+    }
     

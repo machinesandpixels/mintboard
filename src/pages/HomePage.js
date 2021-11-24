@@ -66,7 +66,7 @@ const HomePage = () => {
               </Col>
             </Row>
             
-            <Row>
+            <Row className="gradient--bg">
               <Col>
               <Row className="mb-5">
               <Col  className="d-flex justify-content-around">
