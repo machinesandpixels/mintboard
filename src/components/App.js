@@ -7,10 +7,10 @@ import {
 import Header from './Header';
 import HomePage from '../pages/HomePage';
 import WhiteBoard from '../pages/WhiteBoard';
+import AboutPage from '../pages/AboutPage';
 
 const App = () => {
   return (
-    // <div>
      <Router>
           <Header />
           <Routes>
@@ -25,9 +25,13 @@ const App = () => {
             // component={ WhiteBoard }  
             element={ <WhiteBoard /> } 
             />
+             <Route 
+            path="/about"
+            // component={ WhiteBoard }  
+            element={ <AboutPage /> } 
+            />
           </Routes>
       </Router>
-  // </div>
   );
 }
 
