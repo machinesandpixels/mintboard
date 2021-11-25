@@ -1,1 +1,1 @@
-# Minted Images
+# Mintboard
