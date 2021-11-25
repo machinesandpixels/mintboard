@@ -5,7 +5,6 @@ import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import ListGroup from 'react-bootstrap/ListGroup';
 import Row from 'react-bootstrap/Row';
 import Footer from '../components/Footer';
 
@@ -15,16 +14,9 @@ const HomePage = () => {
             <Container>
             <Row>
               <Col>
-              <h1 className="text-dark">
-                 <span className="gradient--text"> 
-                     Mintboard
-                 </span> 
-              </h1>
-              {/* <h1 className="text-dark">
-                Jot down your thoughts with <span className="gradient--text"> 
-                     Mintboard
-                 </span> 
-              </h1> */}
+                <h1 className="gradient--text">
+                    Mintboard
+                </h1>
               </Col>
             </Row>
 
@@ -32,24 +24,18 @@ const HomePage = () => {
               <Col>
                 <div className="d-flex justify-content-center"> 
                   <Card id="card-border" style={{ width: '25rem' }}>
-                  {/* <div className="d-flex justify-content-center"> 
-                  <Card id="card-border" style={{ width: '35rem' }}> */}
-                  <Card.Img variant="top" src="/images/whiteboard.jpeg" />
-                  <Card.Body>
-              <Card.Title 
-                className="d-flex justify-content-center">
-                Try Mintboard here
-                </Card.Title>
-              {/* <Card.Text>
-                Some quick example text to build on the card title and make up the          bulk of
-                the card's content.
-              </Card.Text> */}
-              <div className="text-center"> 
-              <Button as={Link} to='/whiteboard'  className="text-dark gradient--bg">
-                Click Me
-              </Button>
-              </div>
-                  </Card.Body>
+                    <Card.Img variant="top" src="/images/whiteboard.jpeg" />
+                    <Card.Body>
+                      <Card.Title 
+                    className="d-flex justify-content-center">
+                        Try Mintboard here
+                      </Card.Title>
+                      <div className="text-center"> 
+                  <Button as={Link} to='/whiteboard'  className="text-dark  gradient--bg">
+                      Click Me
+                  </Button>
+                      </div>
+                    </Card.Body>
                   </Card>
                 </div>
               </Col>
@@ -57,11 +43,9 @@ const HomePage = () => {
 
             <Row>
               <Col>
-              <h1 className="text-dark">
-                 <span className="gradient--text"> 
-                     Features
-                 </span> 
-              </h1>
+                <h1 className="gradient--text">
+                  Features
+                </h1>
               </Col>
             </Row>
             
@@ -117,52 +101,42 @@ const HomePage = () => {
               </Col>
             </Row>
 
-          
-            
-            <Row style={{ width: '45rem' }}>
-            <Col>
-            1 of 2
-            <Card>
-              <Card.Img variant="top" src="https://imgr.search.brave.com/5sH5KI0ukbsFd2hNklHSMjsBsbnhRX5YcPeNgsnM3k8/fit/736/225/ce/1/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC4z/emhHZGhRSTY5REVo/a0picThydTFBSGFF/eCZwaWQ9QXBp" />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the          bulk of
-                the card's content.
-              </Card.Text>
-              <Button className="logo--text">
-              {/* <Button variant="primary"> */}
-                Go somewhere
-              </Button>
-            </Card.Body>
-          </Card>
-            </Col>
-            <Col>
-            2 of 2
-            <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="holder.js/100px180" />
-  <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
-  </Card.Body>
-</Card>
-            </Col>
-        </Row>
-        <Row>
-    <Col><h1>Create your Minted Image </h1></Col>
-    <Col>2 of 2: See How</Col>
-  </Row>
-  <Row>
-    <Col>1 of 3</Col>
-    <Col>2 of 3</Col>
-    <Col>3 of 3
+            <Row>
+              <Col>
+                <h1 className="gradient--text">
+                  Development Team
+                </h1>
+              </Col>
+            </Row>
+
+            <Row>
+            <div className="d-flex justify-content-center">
+   
+              <Image style={{ width: '150px' }} src="/images/devteam_image.jpg" roundedCircle />
+    
+            </div>
+            </Row>
+
+            <Row xs={1} md={2} className="g-4">
+  {Array.from({ length: 4 }).map((_, idx) => (
+    <Col>
+      <Card>
+        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Body>
+          <Card.Title>Card title</Card.Title>
+          <Card.Text>
+            This is a longer card with supporting text below as a natural
+            lead-in to additional content. This content is a little bit longer.
+          </Card.Text>
+        </Card.Body>
+      </Card>
     </Col>
-  </Row>
-            </Container>  
+  ))}
+</Row>
+
+
+            </Container>
+
             <Footer />
         </div>
     )
