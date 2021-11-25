@@ -32,6 +32,7 @@ h1 {
 
 .gradient--text {
   background: -webkit-linear-gradient(rgba(0,212,169,1), rgba(3,177,254,1) 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

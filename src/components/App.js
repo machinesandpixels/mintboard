@@ -1,7 +1,6 @@
 import React from 'react';
 import { 
   BrowserRouter as Router, 
-  Routes,
   Route
 } from 'react-router-dom';
 import Header from '../layout/Header';
@@ -13,24 +12,19 @@ const App = () => {
   return (
      <Router>
           <Header />
-          <Routes>
           <Route
             exact
             path='/'
-            // component={ HomePage }
-            element={ <HomePage /> }
+            component={ HomePage }
           />
           <Route 
             path="/whiteboard"
-            // component={ WhiteBoard }  
-            element={ <WhiteBoard /> } 
+            component={ WhiteBoard }  
             />
              <Route 
             path="/about"
-            // component={ WhiteBoard }  
-            element={ <AboutPage /> } 
+            component={ AboutPage }   
             />
-          </Routes>
       </Router>
   );
 }
