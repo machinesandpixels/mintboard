@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
@@ -7,6 +6,7 @@ import Image from 'react-bootstrap/Image';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Jumbotron from '../components/Jumbotron';
 import { Icon } from '@iconify/react';
 import Footer from '../layout/Footer';
 
@@ -14,35 +14,8 @@ const HomePage = () => {
     return (
         <div>
             <Container>
-            <Row>
-              <Col>
-                <h1 className="gradient--text">
-                    Mintboard
-                </h1>
-              </Col>
-            </Row>
-
-            <Row>
-              <Col>
-                <div className="d-flex justify-content-center"> 
-                  <Card id="card-border" style={{ width: '25rem' }}>
-                    <Card.Img variant="top" src="/images/whiteboard.jpeg" />
-                    <Card.Body>
-                      <Card.Title 
-                    className="d-flex justify-content-center">
-                        Try Mintboard here
-                      </Card.Title>
-                      <div className="text-center"> 
-                  <Button as={Link} to='/whiteboard'  className="text-dark  gradient--bg">
-                      Click Me
-                  </Button>
-                      </div>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </Col>
-            </Row>
-
+              <Jumbotron />
+           
             <Row>
               <Col>
                 <h1 className="gradient--text">
