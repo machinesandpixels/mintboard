@@ -15,7 +15,7 @@ h1 {
   text-align: center;
 }
 
-#card-border{
+#card-border {
   border-radius: 1px;
   filter: drop-shadow(0 0 0.19rem rgb(0, 0, 0));
 }
@@ -25,22 +25,23 @@ h1 {
   margin: 2rem;
 }
 
-.gradient--bg{
+.gradient--bg {
   background: rgb(0,212,169);
   background: linear-gradient(90deg, rgba(0,212,169,1) 0%, rgba(3,177,254,1) 100%);
 }
 
-.gradient--text{
+.gradient--text {
   background: -webkit-linear-gradient(rgba(0,212,169,1), rgba(3,177,254,1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.gradient--hr{
+.gradient--hr {
   background: rgb(0,212,169);
   background: linear-gradient(90deg, rgba(0,212,169,1) 0%, rgba(3,177,254,1) 100%);
-  width: 200px;
   height: 2px;
+  width: 200px;
+ 
 }
 
 .drawing--container {
@@ -51,11 +52,16 @@ h1 {
 }
    
 .toolbar {
-      background: rgb(21, 22, 26);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
+  background: rgb(21, 22, 26);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.toolbar--controls {
+  cursor: pointer;
+  color: #fff;
 }
 
 .footer {

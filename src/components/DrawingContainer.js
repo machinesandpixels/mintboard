@@ -2,11 +2,8 @@ import React, { useState, useRef } from "react";
 import { Stage } from "react-konva";
 import Drawing  from "./Drawing";
 import BackgroundLayer from "./BackgroundLayer";
-import { CirclePicker, HuePicker } from 'react-color';
+import { CirclePicker } from 'react-color';
 import { MapMode, ColorList } from "./constants";
-import IconButton from '@material/react-icon-button';
-import MaterialIcon from '@material/react-material-icon'
-import '@material/react-icon-button/dist/icon-button.css';
 
 let history = [[]];
 let historyStep = 0;
@@ -74,13 +71,17 @@ const DrawingContainer = () => {
   return (
     <div className="drawing--container" >
       <div className="toolbar">
+          <div 
+            className="mx-4 mt-3 mb-3 toolbar--controls"  
+            onClick={handleUndo}> 
+              Undo 
+          </div>
 
-        <IconButton className="mx-5" onClick={handleUndo}>
-          <MaterialIcon style={{ color: "white" }} icon='Undo' />
-        </IconButton>
-        <IconButton className="mb-3" onClick={handleRedo}>
-          <MaterialIcon style={{ color: "white" }} icon='Redo' />
-        </IconButton>
+          <div 
+            className="mb-3 toolbar--controls" 
+            onClick={handleRedo}> 
+              Redo 
+          </div>
 
         <CirclePicker
           width="30px"
