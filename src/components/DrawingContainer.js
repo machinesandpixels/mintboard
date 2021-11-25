@@ -12,7 +12,7 @@ const mapSize = 500;
 const DrawingContainer = () => {
   const [lines, setLines] = useState([]);
   const [drawing, setDrawing] = useState(false);
-  const [color, setColor] = useState("red");
+  const [color, setColor] = useState("#FF0000");
   const [mapMode, setMapMode] = useState(MapMode.Drawing);
   const stageRef = useRef(null);
 
