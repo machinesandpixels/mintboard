@@ -6,7 +6,7 @@ import Image from 'react-bootstrap/Image';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import Footer from '../components/Footer';
+import Footer from '../layout/Footer';
 
 const HomePage = () => {
     return (

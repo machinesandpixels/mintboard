@@ -4,7 +4,7 @@ import Drawing  from "./Drawing";
 import BackgroundLayer from "./BackgroundLayer";
 import { CirclePicker, HuePicker } from 'react-color';
 import { MapMode, ColorList } from "./constants";
-import IconButton, { IconToggle } from '@material/react-icon-button';
+import IconButton from '@material/react-icon-button';
 import MaterialIcon from '@material/react-material-icon'
 import '@material/react-icon-button/dist/icon-button.css';
 
@@ -13,10 +13,10 @@ let historyStep = 0;
 const mapSize = 500;
 
 const DrawingContainer = () => {
-  const [lines, setLines] = useState([])
-  const [drawing, setDrawing] = useState(false)
-  const [color, setColor] = useState("red")
-  const [mapMode, setMapMode] = useState(MapMode.Drawing)
+  const [lines, setLines] = useState([]);
+  const [drawing, setDrawing] = useState(false);
+  const [color, setColor] = useState("red");
+  const [mapMode, setMapMode] = useState(MapMode.Drawing);
   const stageRef = useRef(null);
 
   const handleUndo = () => {
