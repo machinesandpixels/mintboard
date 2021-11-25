@@ -4,16 +4,11 @@ import DrawingContainer from '../components/DrawingContainer';
 
 const WhiteBoard = () => {
     return (
-    <div className="">
-        <div className="logo--container">
+    <div>
+        <div className="d-flex justify-content-center">
             <Logo />
         </div>
-      <div className="whiteboardd">
-      {/* <div className="drawing-area"> */}
-        {/* <DrawingContainer style={{ width: '5rem' }} /> */}
-      {/* </div> */}
-      <DrawingContainer />
-      </div>
+        <DrawingContainer />
     </div>
     )
 }

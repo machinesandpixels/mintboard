@@ -16,7 +16,6 @@ const DrawingContainer = () => {
   const [lines, setLines] = useState([])
   const [drawing, setDrawing] = useState(false)
   const [color, setColor] = useState("red")
-  // const [mapMode, setMapMode] = useState(MapMode.Map)
   const [mapMode, setMapMode] = useState(MapMode.Drawing)
   const stageRef = useRef(null);
 
@@ -73,52 +72,23 @@ const DrawingContainer = () => {
     setColor(value.hex)
   }
   return (
-    <div>
-        {/* <div id="color-picker">
-        <HuePicker
-          onChange={handleColorChange} />
-           <CirclePicker
-           className="picker"
-          style={{ width: '10rem' }}
-          width="30px"
-          circleSpacing={3}
-          colors={ColorList}
-          onChange={handleColorChange} />
-          
-      </div> */}
-       
-   
-    <div className="container_" >
-      <div className="toolbar_">
-        {/* <IconButton onClick={
-          () => {
-            setMapMode(mapMode === MapMode.Drawing ? MapMode.Map : MapMode.Drawing)
-          }}>
-          <IconToggle >
-          <div icon='DRAW'> ?: </div>
-            <MaterialIcon style={{ color: "#dce775" }} icon='createe' />
-          </IconToggle>
-          <IconToggle isOn >
-            <MaterialIcon style={{ color: "#37D67A" }} icon='Undraw' />
-          </IconToggle>
-        </IconButton> */}
+    <div className="drawing--container" >
+      <div className="toolbar">
+
         <IconButton className="mx-5" onClick={handleUndo}>
           <MaterialIcon style={{ color: "white" }} icon='Undo' />
         </IconButton>
         <IconButton className="mb-3" onClick={handleRedo}>
           <MaterialIcon style={{ color: "white" }} icon='Redo' />
         </IconButton>
-      {/* <div id="color-picker">
-        <HuePicker
-          onChange={handleColorChange} />
-      </div> */}
+
         <CirclePicker
-          // style={{ width: '10rem' }}
           width="30px"
           circleSpacing={3}
           colors={ColorList}
           onChange={handleColorChange} />
       </div>
+
       <div className={`${mapMode === MapMode.Drawing ? "drawing" : ""}`}>
         <Stage
           width={mapSize}
@@ -136,7 +106,6 @@ const DrawingContainer = () => {
           }
         </Stage>
       </div>
-    </div>
     </div>
   );
 }
