@@ -10,10 +10,11 @@ let historyStep = 0;
 const mapSize = 500;
 
 const DrawingContainer = () => {
+
   const [lines, setLines] = useState([]);
   const [drawing, setDrawing] = useState(false);
   const [color, setColor] = useState("#FF0000");
-  const [mapMode, setMapMode] = useState(MapMode.Drawing);
+  const [mapMode] = useState(MapMode.Drawing);
   const stageRef = useRef(null);
 
   const handleUndo = () => {
@@ -68,6 +69,7 @@ const DrawingContainer = () => {
   const handleColorChange = (value, event) => {
     setColor(value.hex)
   }
+
   return (
     <div className="drawing--container" >
       <div className="toolbar">
