@@ -118,8 +118,7 @@ h1 {
      flex: 3;
     }
 
-    .tt{
-      width: 900px;
-      padding: 4rem;
-    }
+.footer {
+  border-top: 1px solid rgb(235, 235, 235);
+}
     
