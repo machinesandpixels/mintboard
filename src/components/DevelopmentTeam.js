@@ -31,7 +31,7 @@ const DevelopmentTeam = () => {
                                 <div> 
                                 <Image className="mt-3 mb-3" style={{ width: '150px' }} src="/images/devteam_image.jpg" roundedCircle />
                                 </div>
-                                <Card.Text style={{ width: '400px', padding: '1.5rem' }}>
+                                <Card.Text className="devteam--text">
    Hi, there! I'm a self-taught Web Developer and Bootcamp Grad. And Although, I didn't start programming until my late twenties. I really do think it's an exciting time to begin a Development Career. 
    With Web 3, VR, and Self Driving Cars on the horizon. I think it's the perfect time to discover, "Hello World."
                                 </Card.Text>
