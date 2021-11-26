@@ -51,6 +51,11 @@ h1 {
      margin-top: 20px;
      height: 366px;
 }
+
+.devteam--text{
+  width: 400px;
+  padding: 1.5rem;
+}
    
 .toolbar {
   background: rgb(21, 22, 26);
@@ -71,4 +76,18 @@ h1 {
 .footer {
   border-top: 1px solid rgb(235, 235, 235);
 }
-    
+
+@media (max-width: 667px){
+
+  h1{
+      font-size: 0.7rem;
+  }
+
+  .devteam--text{
+    width: 250px;
+  }
+
+  .toolbar{
+    margin-left: 20rem;
+  }
+}
