@@ -1,26 +1,24 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-// import { Navbar, Nav } from 'react-bootstrap'
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Container from 'react-bootstrap/Container';
 
 const Header = () => {
     return (
         <Navbar collapseOnSelect expand="lg" className="gradient--bg" variant="dark">
-        {/* <Navbar collapseOnSelect expand="lg" bg="success" variant="dark"> */}
           <Container>
                 <Navbar.Brand as={Link} to='/'>
-                    Mintboard
+                    <Image fluid className="" src="/images/leaf.png" rounded />
                 </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="ml-auto">
-              <Nav.Link as={NavLink} to='/about'>
+              <Nav.Link className="text-white" as={NavLink} to='/about'>
                 About
               </Nav.Link>
-              <Nav.Link as={NavLink} to='/whiteboard'>
+              <Nav.Link className="text-white" as={NavLink} to='/whiteboard'>
                   Try Mintboard
               </Nav.Link>
             </Nav>
