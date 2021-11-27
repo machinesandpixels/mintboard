@@ -25,7 +25,7 @@ const Features = () => {
                   <div className="align-self-center"> 
                     <h1> Express Yourself </h1> 
                   </div>
-                  <div> 
+                  <div className="features--img"> 
                     <Image fluid src="/images/express_yourself.gif" rounded /> 
                   </div>
                 </div>
@@ -38,7 +38,7 @@ const Features = () => {
                     style={{ width: '780px' }} 
                     className="d-flex justify-content-around"
                   > 
-                  <div> 
+                  <div  className="features--img"> 
                     <Image fluid className="mr-5" src="/images/undo.gif" rounded /> 
                   </div>
                   <div className="align-self-center"> 
@@ -57,7 +57,7 @@ const Features = () => {
                   <div className="align-self-center"> 
                     <h1> Even Choose A Color </h1> 
                   </div>
-                  <div> 
+                  <div  className="features--img"> 
                     <Image fluid src="/images/choose_a_color.gif" rounded /> 
                   </div>
                 </div>

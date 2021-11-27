@@ -70,24 +70,25 @@ h1 {
   color: #fff;
 }
 
-.tt {
-  cursor: pointer;
-}
 .footer {
   border-top: 1px solid rgb(235, 235, 235);
 }
 
 @media (max-width: 667px){
 
-  h1{
+  h1 {
       font-size: 0.7rem;
   }
 
-  .devteam--text{
+  .devteam--text {
     width: 250px;
   }
 
-  .toolbar{
+  .features--img {
+    width: 230px;
+  }
+
+  .toolbar {
     margin-left: 20rem;
   }
 }
