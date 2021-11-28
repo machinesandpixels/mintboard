@@ -37,7 +37,7 @@ const AboutPage = () => {
                                 </Card.Title>
                                 <div> 
                                     <Image  
-                                        src="https://imgr.search.brave.com/w3aX0trlvYQ8J5uB0gvfWaYlc275Ar5P3GD9IxKXKio/fit/160/225/ce/1/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5j/T05NY1lsM2F3c0pK/ZGdEVkd0T2xRQUFB/QSZwaWQ9QXBp"
+                                        src="/images/about_logo.jpeg"
                                         roundedCircle 
                                     />
                                 </div>
