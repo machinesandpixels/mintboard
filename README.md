@@ -32,5 +32,16 @@ Build an app that lets people express their creativity in a visual format. You c
   * Try Mintboard here text
   * Click Me button
 
-2. Features text
+4. Features text
+
+5. Gradient Wall  
+  * Three sections each with text and a gif image
+
+6. Development Team text
+
+7. Card
+  * Name
+  * Image
+  * Bio
+  * Social Media links
 
