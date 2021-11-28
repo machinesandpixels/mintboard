@@ -23,7 +23,9 @@ const Features = () => {
                     className="d-flex justify-content-around"
                   > 
                   <div className="align-self-center"> 
-                    <h1> Express Yourself </h1> 
+                    <h1 className="features--text"> 
+                      Express Yourself 
+                    </h1> 
                   </div>
                   <div className="features--img"> 
                     <Image fluid src="/images/express_yourself.gif" rounded /> 
@@ -42,7 +44,9 @@ const Features = () => {
                     <Image fluid className="mr-5" src="/images/undo.gif" rounded /> 
                   </div>
                   <div className="align-self-center"> 
-                    <h1>Change Your Mind</h1> 
+                    <h1 className="features--text"> 
+                      Change Your Mind 
+                    </h1> 
                   </div>
                 </div>
               </Col>
@@ -55,7 +59,9 @@ const Features = () => {
                     className="d-flex justify-content-around"
                   > 
                   <div className="align-self-center"> 
-                    <h1> Even Choose A Color </h1> 
+                    <h1 className="features--text"> 
+                      Even Choose A Color 
+                    </h1> 
                   </div>
                   <div  className="features--img"> 
                     <Image fluid src="/images/choose_a_color.gif" rounded /> 
