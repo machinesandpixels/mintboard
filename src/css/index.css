@@ -76,7 +76,7 @@ h1 {
 
 @media (max-width: 667px){
 
-  h1 {
+  .features--text {
       font-size: 0.7rem;
   }
 
@@ -91,4 +91,5 @@ h1 {
   .toolbar {
     margin-left: 20rem;
   }
+
 }
