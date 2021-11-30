@@ -12,8 +12,8 @@ const HomePage = () => {
             <Container>
               <Jumbotron />
               <Features />
-              <DevelopmentTeam />
               <Challenge />
+              <DevelopmentTeam />
             </Container>
             <Footer />
         </div>

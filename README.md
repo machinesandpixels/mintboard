@@ -37,15 +37,29 @@ Build an app that lets people express their creativity in a visual format. You c
 5. Gradient Wall  
   * Three sections each with text and a gif image
 
-6. Development Team text
+6. Hackathon Challenge text 
 
 7. Card
+  * Headline
+  * Text
+  * Headline
+  * Text
+  * Horizontal Rule
+  * Text
+  * Headline
+  * Text
+  * Headline
+  * Two Icons
+
+8. Development Team text
+
+9. Card
   * Name
   * Image
   * Bio
   * Social Media links
 
-8. Footer
+10. Footer
   * Image
 
 ## These are some links that really helped me get unstuck
@@ -63,8 +77,6 @@ Build an app that lets people express their creativity in a visual format. You c
 **How to get navigation links to work with React Bootrap**
 
 1. https://stackoverflow.com/questions/35687353/react-bootstrap-link-item-in-a-navitem
-
-2. https://stackoverflow.com/questions/35687353/react-bootstrap-link-item-in-a-navitem
 
 **How to create gradients on background, text, and horizontal rule tag**
 
