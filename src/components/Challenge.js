@@ -43,8 +43,8 @@ const Challenge = () => {
 
                         <div className="mt-3 challenge--text">
                             <h5 className="yy">
-                                <Badge id="yy" bg="secondary">
-                            As long as it fulfills one OR both
+                                <Badge bg="secondary">
+                                    Requirements
                                 </Badge>
                             </h5>
                         </div>
@@ -54,6 +54,9 @@ const Challenge = () => {
                             <p className="mb-2"> 
                             As a user, I can drag my mouse across the screen to make free-form lines. 
                             </p>
+                            <p className="mr-5 opacity--bg"> 
+                                or
+                            </p>
                             <p className="mb-2"> 
                             As a user, I can click areas of the screen with my mouse to fill them with a color, texture or pattern. 
                             </p>
@@ -61,31 +64,6 @@ const Challenge = () => {
                         </div>
                         </Card.Text>
                             <hr />
-                        <Card.Text>
-                            <p className="mt-3"> 
-                            You can have up to 3 members on a team if you have a designer on your team 
-                            </p>
-                        <h5 >
-                            <Badge className="mt-2 mb-2" bg="secondary">
-                               Team Examples
-                            </Badge>
-                        </h5>
-                      
-                       <div className="d-flex flex-column"> 
-                       <p>  One UX/UI designer, and two developers </p>
-                       <p> 
-                           You can pair with a friend, with the power of two developers 
-                        </p>
-                       <p>  
-                           And alternatively, there is always room for a party of one dev 
-                        </p>
-    
-                        </div>
-                     
-                        <p className="opacity--bg"> 
-                            Please note, teams of 3 developers are no longer allowed
-                        </p>
-                        </Card.Text>
                         
                         <Badge className="mt-3 mb-3" bg="light" text="dark">
                             Built With
