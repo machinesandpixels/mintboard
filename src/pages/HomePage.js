@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Jumbotron from '../components/Jumbotron';
 import Features from '../components/Features';
 import DevelopmentTeam from '../components/DevelopmentTeam';
+import Challenge from '../components/Challenge';
 import Footer from '../layout/Footer';
 
 const HomePage = () => {
@@ -12,6 +13,7 @@ const HomePage = () => {
               <Jumbotron />
               <Features />
               <DevelopmentTeam />
+              <Challenge />
             </Container>
             <Footer />
         </div>

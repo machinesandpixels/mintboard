@@ -45,6 +45,10 @@ h1 {
  
 }
 
+.opacity--bg {
+  opacity: 0.4;
+}
+
 .drawing--container {
      display: flex; 
      justify-content: center;
@@ -55,6 +59,16 @@ h1 {
 .devteam--text{
   width: 400px;
   padding: 1.5rem;
+}
+
+.challenge--text {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.challenge--icons {
+  font-size: 40px;
 }
    
 .toolbar {

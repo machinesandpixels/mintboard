@@ -50,8 +50,7 @@ const DevelopmentTeam = () => {
                                  rel="noopener noreferrer"  
                                 >
                                 <Icon
-                                icon="logos:linkedin"
-                                className="tt" 
+                                icon="logos:linkedin" 
                                 />
                               </Button>
                                 </div>
