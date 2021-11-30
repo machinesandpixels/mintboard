@@ -44,10 +44,6 @@ Build an app that lets people express their creativity in a visual format. You c
   * Text
   * Headline
   * Text
-  * Horizontal Rule
-  * Text
-  * Headline
-  * Text
   * Headline
   * Two Icons
 
